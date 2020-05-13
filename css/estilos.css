@@ -1,0 +1,45 @@
+body {
+	background-image: url('https://static.vecteezy.com/system/resources/previews/000/057/102/non_2x/blue-wave-background-vector.jpg');
+	background-size: auto 100vh;
+	font-family: Arial;
+	height: 100vh;
+	/* background: blue; */
+	
+}
+
+/* ponto no início se refere uma classe */
+.menu {
+	background: white;
+}
+
+/* pseudo-classe não existe no html 
+   está tirando efeito de qualquer texto */
+a {
+	color: teal;
+	text-decoration: none;
+}
+/* está dando um efeito quando for a ação hover */
+a:hover {
+	text-decoration: underline;
+}
+
+.menu ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* esta declaração dá o estilo desejado para 
+uma tag específica de uma classe */
+.menu li {
+	list-style: none;
+}
+
+.site-subtitle,
+.site-title {
+	color: black;
+	text-align: center;
+}
+
+.site-subtitle {
+	font-style: italic;
+}
