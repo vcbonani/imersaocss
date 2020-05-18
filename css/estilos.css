@@ -1,15 +1,51 @@
+/* reset no css */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-	background-image: url('https://static.vecteezy.com/system/resources/previews/000/057/102/non_2x/blue-wave-background-vector.jpg');
+	background-image: url('../img/fundo.jpg');
 	background-size: auto 100vh;
 	font-family: Arial;
 	height: 100vh;
+	font-size: 12px;
 	/* background: blue; */
-	
+}
+
+/* condicional @ ou breakpoint */
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+	body{
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 600px) {
+	body{
+		font-size: 18px;
+	}
+}
+
+header{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* ponto no início se refere uma classe */
 .menu {
 	background: white;
+	position: fixed;
+	width: 100vw;
+	top: 0;
+}
+
+.menu a{
+	display: block;
+	padding: 10px 20px;
 }
 
 /* pseudo-classe não existe no html 
@@ -36,10 +72,19 @@ uma tag específica de uma classe */
 
 .site-subtitle,
 .site-title {
-	color: black;
+	color: white;
 	text-align: center;
+}
+
+.site-title{
+	font-size: 4em;
 }
 
 .site-subtitle {
 	font-style: italic;
+}
+
+.img-portfolio{
+	height: 180px;
+	width: 180px;
 }
