@@ -8,7 +8,7 @@
 body {
 	background-image: url('../img/fundo.jpg');
 	background-size: auto 100vh;
-	font-family: Arial;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	height: 100vh;
 	font-size: 12px;
 	/* background: blue; */
@@ -78,13 +78,51 @@ uma tag específica de uma classe */
 
 .site-title{
 	font-size: 4em;
+	font-family: 'Maven Pro', sans-serif;
 }
 
 .site-subtitle {
 	font-style: italic;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.portfolio{
+	padding: 2em;
+}
+
+.portfolio h2{
+	font-family: 'Quicksand', sans-serif;
+	margin-bottom: 1.5em;
+}
+
+.portfolio .grid{
+	display: grid;
+	gap: 2em;
+	align-content: center;
+	justify-content: center;
+	height: calc(100vh - 8em - 48px);
+}
+
+@media(min-width: 560px) {
+	.portfolio .grid{
+		grid-template-columns: repeat(2, 180px);
+	}	
+}
+
+@media(min-width: 880px) {
+	.portfolio .grid{
+		grid-template-columns: repeat(3, 180px);
+	}	
+}
+
+.portfolio figure{
+	text-align: center;
 }
 
 .img-portfolio{
 	height: 180px;
 	width: 180px;
+	object-fit: cover; /* faz a imagem caber sem deformar na resolução */
+	object-position: left bottom;
+	border-radius: 10%; /* arredonda a borda */
 }
