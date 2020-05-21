@@ -41,11 +41,19 @@ header{
 	position: fixed;
 	width: 100vw;
 	top: 0;
+	z-index: 1;
 }
 
 .menu a{
 	display: block;
 	padding: 10px 20px;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+.menu a:active,
+.menu a:hover{
+	background-color: teal;
+	color: white;
 }
 
 /* pseudo-classe não existe no html 
@@ -57,6 +65,19 @@ a {
 /* está dando um efeito quando for a ação hover */
 a:hover {
 	text-decoration: underline;
+}
+
+.titulo{
+	transform: scale(0.2) translatey(50vh);
+	opacity: 0;
+	animation: linear 1s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+	100%{
+		transform: scale(1) translatey(0);
+		opacity: 1;		
+	}
 }
 
 .menu ul {
@@ -86,13 +107,20 @@ uma tag específica de uma classe */
 	font-family: 'Quicksand', sans-serif;
 }
 
-.portfolio{
+.contato, .portfolio{
 	padding: 2em;
+	min-height: 100vh;
 }
 
-.portfolio h2{
+.contato, .portfolio h2{
 	font-family: 'Quicksand', sans-serif;
+	color: white;
 	margin-bottom: 1.5em;
+}
+
+.portfolio .grid figcaption{
+	color: white;
+	font-size: 30px;
 }
 
 .portfolio .grid{
@@ -111,7 +139,7 @@ uma tag específica de uma classe */
 
 @media(min-width: 880px) {
 	.portfolio .grid{
-		grid-template-columns: repeat(3, 180px);
+		grid-template-columns: repeat(4, 180px);
 	}	
 }
 
@@ -125,4 +153,27 @@ uma tag específica de uma classe */
 	object-fit: cover; /* faz a imagem caber sem deformar na resolução */
 	object-position: left bottom;
 	border-radius: 10%; /* arredonda a borda */
+	transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+	transform: scale(1.1) translatey(-10px);
+	/* rotate junto com o transform permite girar a imagem */
+}
+
+.contato .icons{
+	text-align: center;
+}
+
+.contato a{
+	color: white;
+	font-size: 10em;
+	text-align: center;
+	transition: text-shadow 0.5s
+}
+
+.contato a:active,
+.contato a:hover{
+	text-decoration: none;
+	text-shadow: 0px 0px 20px rgba(255,255,255,0.8);
 }

@@ -7,24 +7,25 @@
 	<title>Vinicius</title>
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Quicksand:wght@700&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/e3cb96d4ae.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
 	<header>
 	  <nav class="menu">
 		<ul>
-		  <li><a href="#">Sobre</a></li>
-		  <li><a href="#">O que eu faço?</a></li>
-		  <li><a href="#">Contato</a></li>
+		  <li><a href="#sobre">Sobre</a></li>
+		  <li><a href="#portfolio">O que eu faço?</a></li>
+		  <li><a href="#contato">Contato</a></li>
 		</ul>
 	  </nav>
-	  <div>
+	  <div class="titulo">
 		  <h1 class="site-title">Vinícius</h1>
-		  <h2 class="site-subtitle">Consultor de TI</h2>	  
+		  <h2 class="site-subtitle">Consultor TI</h2>	  
 	  </div>
 	</header>
 	
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 		<h2>O que eu faço?</h2>
 		
 		<div class="grid">
@@ -34,7 +35,7 @@
 			</figure>
 			<figure>
 				<img class="img-portfolio" src="./img/photoshop.jpg" alt="Mexo no Photoshop">
-				<figcaption>Mexo no Photoshop</figcaption>
+				<figcaption>Mexo no Photoshop nas horas vagas</figcaption>
 			</figure>
 			<figure>
 				<img class="img-portfolio" src="./img/agile.jpg" alt="Estudo Agile...">
@@ -46,6 +47,24 @@
 			</figure>
 		</div>
 		
+	</section>
+	
+	<section class="contato" id="contato">
+		<h2>Contato</h2>
+		<div class="grid icons">
+			<a target="_blank" href="https://github.com/vcbonani/">
+				<i class="fab fa-github-square"></i>
+			</a>
+			<a target="_blank" href="https://www.instagram.com/hqcommusica/">
+				<i class="fab fa-instagram-square"></i>
+			</a>
+			<a target="_blank" href="https://www.linkedin.com/in/vinícius-cunha-bonani-166b6a54/">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a href="mailto:vcbonani@gmail.com">
+				<i class="fas fa-envelope-square"></i>
+			</a>
+		</div>
 	</section>
 	
 </body>
