@@ -13,7 +13,7 @@
 <body>
 	<header>
 	  <nav class="menu">
-		<ul>
+		<ul class="menu1">
 		  <li><a href="#sobre">Sobre</a></li>
 		  <li><a href="#portfolio">O que eu faço?</a></li>
 		  <li><a href="#contato">Contato</a></li>
@@ -25,31 +25,71 @@
 	  </div>
 	</header>
 	
-	<section class="portfolio" id="portfolio">
+	<section class="sobre container" id="sobre">
+		<h2>Sobre</h2>
+		<figure class="avatar">
+			<img class="img-avatar" src="./img/perfil.jpg" alt="Vinicius">
+		</figure>
+		<p>
+			Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla 
+		</p>
+		<p>
+			Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla 
+		</p>
+		<p>
+			Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla Lorem bla bla bla bla 
+		</p>
+		<p>
+			Este site foi construído durante a <a href="https://www.alura.com.br/">Imersão CSS da Alura </a> :)
+		</p>
+	</section>
+	
+	<section class="portfolio container" id="portfolio">
 		<h2>O que eu faço?</h2>
 		
 		<div class="grid">
-			<figure>
-				<img class="img-portfolio" src="./img/oracle.jpg" alt="Trabalho com Oracle EPM">
-				<figcaption>Trabalho com Oracle EPM</figcaption>
-			</figure>
-			<figure>
-				<img class="img-portfolio" src="./img/photoshop.jpg" alt="Mexo no Photoshop">
-				<figcaption>Mexo no Photoshop nas horas vagas</figcaption>
-			</figure>
-			<figure>
-				<img class="img-portfolio" src="./img/agile.jpg" alt="Estudo Agile...">
-				<figcaption>Estudo Agile...</figcaption>
-			</figure>
-			<figure>
-				<img class="img-portfolio" src="./img/sql.jpg" alt="...e SQL também">
-				<figcaption>...e SQL também</figcaption>
-			</figure>
+			
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/oracle.jpg" alt="Trabalho com Oracle EPM">
+					</figure>
+					<div class="card-back">Trabalho com Oracle EPM</div>
+				</div>
+			</div>
+			
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/photoshop.jpg" alt="Mexo no Photoshop">
+					</figure>
+					<div class="card-back">Mexo no Photoshop nas horas vagas</div>
+				</div>
+			</div>			
+			
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/agile.jpg" alt="Estudo Agile...">
+					</figure>
+					<div class="card-back">Estudo Agile...</div>
+				</div>
+			</div>			
+			
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/sql.jpg" alt="...e SQL também">
+					</figure>
+					<div class="card-back">...e SQL também</div>
+				</div>
+			</div>
+				
 		</div>
 		
 	</section>
 	
-	<section class="contato" id="contato">
+	<section class="contato container" id="contato">
 		<h2>Contato</h2>
 		<div class="grid icons">
 			<a target="_blank" href="https://github.com/vcbonani/">

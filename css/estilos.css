@@ -7,7 +7,8 @@
 
 body {
 	background-image: url('../img/fundo.jpg');
-	background-size: auto 100vh;
+	background-size: cover;
+	background-attachment: fixed;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	height: 100vh;
 	font-size: 12px;
@@ -107,40 +108,113 @@ uma tag específica de uma classe */
 	font-family: 'Quicksand', sans-serif;
 }
 
-.contato, .portfolio{
+.sobre, .contato, .portfolio{
 	padding: 2em;
 	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.contato, .portfolio h2{
+@media (min-width: 1200px) {
+	.container{
+		max-width: 1200px;
+	}	
+}
+
+.sobre, .contato, .portfolio h2{
 	font-family: 'Quicksand', sans-serif;
 	color: white;
 	margin-bottom: 1.5em;
 }
 
+.sobre p{
+	margin-bottom: 1.4em;
+	text-indent: 2em;
+	text-align: justify;
+}
+
+.sobre a{
+	color: cyan;
+}
+
+.sobre .avatar{
+	float: right;
+	margin-left: 2em;
+}
+
+.img-avatar{
+	height: 25em;
+	width: auto;
+	clip-path: polygon(0 0, 100% 0, 79% 100%, 20% 100%);
+}
+
+/*
 .portfolio .grid figcaption{
 	color: white;
 	font-size: 30px;
 }
+*/
 
 .portfolio .grid{
 	display: grid;
 	gap: 2em;
 	align-content: center;
 	justify-content: center;
-	height: calc(100vh - 8em - 48px);
+	height: calc(100vh - 20em - 48px);
 }
 
-@media(min-width: 560px) {
+@media(min-width: 360px) {
 	.portfolio .grid{
 		grid-template-columns: repeat(2, 180px);
-	}	
+	}
+	.img-portfolio{
+		height: 100px;
+		width: 100%;
+	}
 }
 
 @media(min-width: 880px) {
 	.portfolio .grid{
 		grid-template-columns: repeat(4, 180px);
 	}	
+	.img-portfolio{
+		height: 180px;
+		width: 100%;
+	}
+}
+
+.flip-card{
+	perspective: 500px;
+}
+
+.card{
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.flip-card:hover .card{
+	transform: rotatex(180deg);
+}
+
+.card-front, .card-back{
+	backface-visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.card-back{
+	background-color: rgba(255,255,255,0.8);
+	height: 180px;
+	width: 100%;
+	transform: rotatex(180deg);
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 10%;
+	align-items:center;
+	display: flex;
 }
 
 .portfolio figure{
@@ -148,18 +222,16 @@ uma tag específica de uma classe */
 }
 
 .img-portfolio{
-	height: 180px;
-	width: 180px;
 	object-fit: cover; /* faz a imagem caber sem deformar na resolução */
 	object-position: left bottom;
 	border-radius: 10%; /* arredonda a borda */
 	transition: transform 500ms;
 }
 
-.img-portfolio:hover{
+/*.img-portfolio:hover{
 	transform: scale(1.1) translatey(-10px);
-	/* rotate junto com o transform permite girar a imagem */
-}
+} */
+
 
 .contato .icons{
 	text-align: center;
